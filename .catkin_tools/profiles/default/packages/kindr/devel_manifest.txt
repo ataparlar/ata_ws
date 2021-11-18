@@ -1,0 +1,5 @@
+kindr
+/home/ataparlar/dummy_ws/devel/.private/kindr/cmake.lock /home/ataparlar/dummy_ws/devel/./cmake.lock
+/home/ataparlar/dummy_ws/devel/.private/kindr/share/kindr/cmake/kindrConfig-version.cmake /home/ataparlar/dummy_ws/devel/share/kindr/cmake/kindrConfig-version.cmake
+/home/ataparlar/dummy_ws/devel/.private/kindr/share/kindr/cmake/kindrConfig.cmake /home/ataparlar/dummy_ws/devel/share/kindr/cmake/kindrConfig.cmake
+/home/ataparlar/dummy_ws/devel/.private/kindr/lib/pkgconfig/kindr.pc /home/ataparlar/dummy_ws/devel/lib/pkgconfig/kindr.pc

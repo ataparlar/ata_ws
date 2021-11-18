@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ataparlar/dummy_ws/devel/lib/python2.7/dist-packages",
+        "/home/ataparlar/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ataparlar/dummy_ws/devel/lib/python2.7/dist-packages",
+        "/home/ataparlar/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

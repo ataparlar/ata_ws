@@ -1,0 +1,89 @@
+rover_joint_publisher:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50
+
+rover_velocity_controller:
+  type: "diff_drive_controller/DiffDriveController"
+  left_wheel: ['left_front_joint', 'left_rear_joint']
+  right_wheel: ['right_front_joint', 'right_rear_joint']
+  publish_rate: 50
+  pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+  twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+  cmd_vel_timeout: 0.25
+  velocity_rolling_window_size: 2
+
+  # Odometry fused with IMU is published by robot_localization, so
+  # no need to publish a TF based on encoders alone.
+  enable_odom_tf: false
+
+  # Husky hardware provides wheel velocities
+  estimate_velocity_from_position: false
+
+  # Wheel separation and radius multipliers
+  wheel_separation_multiplier: 1.0 # default: 1.0
+  wheel_radius:                0.15
+  wheel_radius_multiplier    : 1.0 # default: 1.0
+
+  # Velocity and acceleration limits
+  # Whenever a min_* is unspecified, default to -max_*
+  linear:
+    x:
+      has_velocity_limits    : true
+      max_velocity           : 2.5   # m/s
+      has_acceleration_limits: true
+      max_acceleration       : 3.0   # m/s^2
+  angular:
+    z:
+      has_velocity_limits    : true
+      max_velocity           : 2.0   # rad/s
+      has_acceleration_limits: true
+      max_acceleration       : 6.0   # rad/s^2
+
+
+
+
+  # Robot.
+  map_frame_id:                               base_link
+  robot_base_frame_id:                        base_footprint # base_frame_id: base_link
+  robot_pose_with_covariance_topic:           /base_footprint_pose
+  robot_pose_cache_size:                      200
+  point_cloud_topic:                          /velodyne_points #/camera/depth/points
+  track_point_frame_id:                       base_footprint
+  track_point_x:                              0.0
+  track_point_y:                              0.0
+  track_point_z:                              0.0
+  min_update_rate:                            2.0
+  time_tolerance:                             1.0
+  time_offset_for_point_cloud:                0.0
+  sensor_processor/ignore_points_above:       6
+  robot_motion_map_update/covariance_scale:   0.01
+  #sensor_frame_id: sensor
+  source_frame: velodyne
+  target_frame: base_link
+
+
+
+# Map.
+length_in_x:                                20.0
+length_in_y:                                20.0
+position_x:                                 0.0
+position_y:                                 0.0
+resolution:                                 0.1
+min_variance:                               0.0001
+max_variance:                               0.05
+mahalanobis_distance_threshold:             2.5
+multi_height_noise:                         0.001
+surface_normal_positive_axis:               z
+fused_map_publishing_rate:                  0.5
+enable_visibility_cleanup:                  false
+visibility_cleanup_rate:                    1.0
+scanning_duration:                          1.0
+
+# Init submap
+initialize_elevation_map:                   false
+initialization_method:                      0
+length_in_x_init_submap:                    20.0
+length_in_y_init_submap:                    20.0
+margin_init_submap:                         0.3
+init_submap_height_offset:                  0.01
+target_frame_init_submap:                   base_footprint

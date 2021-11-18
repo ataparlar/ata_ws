@@ -1,0 +1,5 @@
+blender_gazebo
+/home/ataparlar/dummy_ws/devel/.private/blender_gazebo/cmake.lock /home/ataparlar/dummy_ws/devel/./cmake.lock
+/home/ataparlar/dummy_ws/devel/.private/blender_gazebo/share/blender_gazebo/cmake/blender_gazeboConfig.cmake /home/ataparlar/dummy_ws/devel/share/blender_gazebo/cmake/blender_gazeboConfig.cmake
+/home/ataparlar/dummy_ws/devel/.private/blender_gazebo/share/blender_gazebo/cmake/blender_gazeboConfig-version.cmake /home/ataparlar/dummy_ws/devel/share/blender_gazebo/cmake/blender_gazeboConfig-version.cmake
+/home/ataparlar/dummy_ws/devel/.private/blender_gazebo/lib/pkgconfig/blender_gazebo.pc /home/ataparlar/dummy_ws/devel/lib/pkgconfig/blender_gazebo.pc
